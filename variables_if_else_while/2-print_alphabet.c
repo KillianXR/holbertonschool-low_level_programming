@@ -1,18 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
-* main - Entry point
-*
-* Return: Always 0 (Success)
-*
-* char - function 
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
-{	
-	char alphabet
+{
+	char low;
 
-	for (alphabet = 'a'; alphabet <= 'z'; low++)
+	for (low = 'a'; low <= 'z'; low++)
 		putchar(low);
 		putchar('\n');
 

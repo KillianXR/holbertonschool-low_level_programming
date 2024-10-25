@@ -2,12 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 
-/* main - Entry point
+/**
+ * main - Entry point
  *
  * Return: Always (0)
  * if: add condition to active a command
  * else: active another command if the condition of if isn't respected
- * print: show something you want 
+ * print: show something you want
  */
 
 int main(void)

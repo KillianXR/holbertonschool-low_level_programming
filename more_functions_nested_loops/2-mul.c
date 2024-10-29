@@ -2,8 +2,8 @@
 
 /**
  * mul - function that multiplies two integers
- *
- * @c: character to check
+ * @a: number a
+ * @b: number b
  *
  * Return: 1 if c is uppercase, 0 otherwise
  */

@@ -7,6 +7,8 @@
  * @b : constant bite, fill the memory
  * @n : number of byte to fill
  *
+ * Return: return s
+ *
  */
 char *_memset(char *s, char b, unsigned int n)
 {

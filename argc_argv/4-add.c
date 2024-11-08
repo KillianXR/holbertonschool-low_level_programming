@@ -12,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0, res= 0;
+	int i, sum = 0, res = 0;
 	char a[] = "Error", *fl;
 
 	if (argc > 1)

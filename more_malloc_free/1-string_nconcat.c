@@ -1,49 +1,49 @@
-#include <stdio.h>
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * string_nconcat - function that concatenate two strings up
- * to n bytes from the second string
- *
- * @s1: string 1
- * @s2: string 2
- * @n: number of bytes from s2 to s1
- *
- * Return: a pointer to the newly memory allocated space
- *
+ * string_nconcat - function to concatnate strings with n bytes
+ * @s1: destination for concatnation
+ * @s2: source of string
+ * @n: int type for size of byte
+ * Return: pointer to new memory allocated
  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2, totalen, i, a;
+	int len1, len2;
+	int total1, total2;
 	char *ptr;
+	int sign = n;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
+	for (len1 = 0; s1[len1] != '\0'; len1++)
+		;
+	for (len2 = 0; s2[len2] != '\0'; len2++)
+		;
 
-	if (n >= len2)
-		n = len2;
-
-	totalen = len1 + n + 1;
-
-	ptr = malloc(totalen);
-		if (ptr == NULL)
-		{
-			return (NULL);
-		}
-
-	for (i = 0; i < len1; i++)
-		ptr[i] = s1[i];
-	for (a = 0; a < n; a++)
-		ptr[i + a] = s2[a];
-
-	ptr[i + a] = '\0';
-
+	if (sign >= len2)
+	{
+		sign = len2;
+		ptr = malloc(sizeof(char) * (len1 + len2 + 1));
+	}
+	else
+		ptr = malloc(sizeof(char) * (len1 + n + 1));
+	if (ptr == NULL)
+		return (NULL);
+	for (total1 = 0; total1 < len1; total1++)
+	{
+		ptr[total1] = s1[total1];
+	}
+	for (total2 = 0; total2 < sign; total2++)
+	{
+		ptr[total1++] = s2[total2];
+	}
+	ptr[total1++] = '\0';
 	return (ptr);
 }

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * _calloc - fuction that allocates memory for an array of nmemb elements,

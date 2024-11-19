@@ -3,7 +3,7 @@
 #include "3-calc.h"
 
 /**
- * main - main function
+ * main - entry point
  *
  * @argc: arguments count
  * @argv: arguments names
@@ -13,33 +13,30 @@
 
 int main(int argc, char *argv[])
 {
-	int num1, num2;
+	char op;
 	int (*op_func)(int, int);
+	int result
 
 	if (argc != 4)
+	}
+		printf("Error\n");
+		return (98);
+	}
+	op = *(argv[2]);
+	if ((op_func == '/' || op == '%') && !atoi(argv[3]))
 	{
 		printf("Error\n");
-		exit(98);
+		return(100);
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
-
-	op_func = get_op_func(argv[2]);
-
-	if (op_func == NULL)
+	op_func = get_op_func(&op);
+	if (op_func == NULL || argv[2][1] != '/0')
 	{
 		printf("Error\n");
-		exit(99);
+		return (99);
 	}
+	result = op_func(atoi(argv[1]), atoi(argv[3]));
 
-	if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
-	printf("%d\n", op_func(num1, num2));
-
+	printf("%d\n", result);
 	return (0);
 }

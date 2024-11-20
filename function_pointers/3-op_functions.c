@@ -41,15 +41,16 @@ int op_mul(int a, int b)
  * op_div - division function
  * @a: first number
  * @b: second number
+ * @Error: print 1 if b = 0
  * Return: result of a / b
  */
 
-int op_div(int a, int b)
+int op_div(int a, int b, int *Error)
 {
 	if (b == 0)
 	{
-		printf("Error,\n");
-			exit(100);
+		*Error = 1;
+		exit(100);
 	}
 	return (a / b);
 }
@@ -58,14 +59,15 @@ int op_div(int a, int b)
  * op_mod - modulo function
  * @a: first number
  * @b: second number
+ * @Error: print 1 if b = 0
  * Return: result of a % b
  */
 
-int op_mod(int a, int b)
+int op_mod(int a, int b, int *Error)
 {
 	if (b == 0)
 	{
-		printf("Error,\n");
+		*Error = 1;
 		exit(100);
 	}
 	return (a % b);

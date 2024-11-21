@@ -18,12 +18,15 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
-	for (i = 0; ops[i].op != NULL; i++)
+	while (ops[i].op != NULL)
 	{
-		if (*s == *(ops[i].op))
+		if (*(ops[i].op) == *s) /* found correct operator */
+		{
 			return (ops[i].f);
+		}
+		i++;
 	}
 	return (NULL);
 }

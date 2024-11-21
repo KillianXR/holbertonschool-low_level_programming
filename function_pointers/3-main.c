@@ -1,16 +1,14 @@
+#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "3-calc.h"
 
 /**
- * main - entry point
+ * main - performs simple operations based on user input
+ * @argc: number of arguments
+ * @argv: array of argument strings
  *
- * @argc: arguments count
- * @argv: arguments names
- *
- * Return: calcul and show result
+ * Return: 0 on success, or the appropriate error code on failure
  */
-
 int main(int argc, char *argv[])
 {
 	char op;
@@ -23,6 +21,7 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 	op = *(argv[2]);
+
 	if ((op == '/' || op == '%') && !atoi(argv[3]))
 	{
 		printf("Error\n");
@@ -35,6 +34,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (99);
 	}
+
 	result = op_func(atoi(argv[1]), atoi(argv[3]));
 
 	printf("%d\n", result);

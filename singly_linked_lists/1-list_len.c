@@ -3,11 +3,11 @@
 #include <stdio.h>
 #include "lists.h"
 
-/*
-* list_len - print the number of element in a list
-* @h: pointer to the list
-* return: length of the list
-*/
+/**
+	* list_len - print the number of element in a list
+	* @h: pointer to the list
+	* Return: length of the list
+	*/
 size_t list_len(const list_t *h)
 {
 	int counter;

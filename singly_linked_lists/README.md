@@ -1,1 +1,1 @@
-## Linked listc
+## Linked list

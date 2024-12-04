@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
 	* add_node_end - add a node in the end of a list
-	* @head: number of character in a string
+	* @head: A pointer to the pointer to the head of the list
 	* @str: the given string
 	* Return: list_t
  */
@@ -24,7 +24,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	while (str[len] != '\0')
+	while (str[count] != '\0')
 	{
 		count++;
 	}

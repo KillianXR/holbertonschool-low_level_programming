@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
 	* add_node - add a node in a list
-	* @head: number of character in a string
+	* @head: A pointer to the pointer to the head of the list
 	* @str: the given string
 	* Return: list_t
  */
